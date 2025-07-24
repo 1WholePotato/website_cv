@@ -1,0 +1,291 @@
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+h1, h2, h3, p {
+  font-family: 'Source Code Pro', monospace;
+   color:#00cc00;
+}
+
+.btn_underline {
+  font-size: 18px;
+  color: #00cc00;
+  font-family: 'Source Code Pro', monospace;;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.btn_underline:focus,
+.btn_underline:hover {
+  color: #fff;
+}
+
+.btn_underline:focus:after,
+.btn_underline:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.btn_underline:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;      /* Center vertically if needed */
+  gap: 40px;                /* Space between buttons */
+  padding: 20px 0;
+  flex-wrap: wrap;          /* Allow wrap on smaller screens */
+}
+
+
+.form-container {
+  width: 700px;
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(145deg, transparent 35%,#00cc00, #00cc00) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #00cc00;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #00cc00;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #00cc00;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #00cc00;
+  height: 96px;
+  border: 1px solid #00cc00;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #414141;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #414141;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #00cc00;
+  font-weight: 600;
+  width: 40%;
+  background: black;
+  border: 1px solid #00cc00 ;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #414141;
+  border-color: #00cc00;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: transparent;
+  overflow:hidden;
+  position: fixed;
+  z-index: 1;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #00cc00;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #333;
+  color: #00cc00;
+}
+
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    background-color: black;
+     
+  }
+
+  .topnav a[href="game.html"] {
+    display: none;
+  }
+
+
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color:#00cc00;
+}
+
+
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid #00cc00;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 50;
+}
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+    border: 1px solid #00cc00;
+}
+@keyframes block{
+    0%{left:400px}
+    100%{left:-50px}
+}
+
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: #00cc00;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
+
